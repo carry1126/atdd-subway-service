@@ -7,25 +7,15 @@ import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.WeightedMultigraph;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
-import static nextstep.subway.path.domain.AgeDiscount.*;
-import static nextstep.subway.path.domain.OverFare.*;
+import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class PathFinder {
     private List<Long> shortestPath = new ArrayList<>();
     private Integer distance;
     private Integer totalFee;
     private int maxAddFee;
-/*
-    @Enumerated(EnumType.STRING)
-    private OverFare overFare;
-    @Enumerated(EnumType.STRING)
-    private AgeDiscount ageDiscount;
-*/
+
     public PathFinder() {
     }
 
